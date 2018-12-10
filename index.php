@@ -1,5 +1,5 @@
 <?php
-echo "<body style='background-color:#4169E1'>";
+echo "<body style='background-color:pink'>";
 echo "hello world!!! ";
 echo "<br/>";
 
