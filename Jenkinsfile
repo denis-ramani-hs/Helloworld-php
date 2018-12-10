@@ -34,7 +34,8 @@ pipeline {
             slackSend channel: '#hs-devops',
                       color: 'good',
                       message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
-        }*/
+        }
+*/
         success {
             mail to: 'deniscramani@gmail.com',
                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
