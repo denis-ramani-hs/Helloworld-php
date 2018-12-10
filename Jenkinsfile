@@ -30,12 +30,12 @@ pipeline {
                 docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
                '''
         }
-        success {
+/*        success {
             slackSend channel: '#hs-devops',
                       color: 'good',
                       message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
-        }
-        failure {
+        }*/
+        success {
             mail to: 'deniscramani@gmail.com',
                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
                  body: "Something is wrong with ${env.BUILD_URL}"
