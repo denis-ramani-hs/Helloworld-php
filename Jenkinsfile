@@ -1,6 +1,6 @@
 pipeline {
     environment {
-                DOCKER_USERNAME = "denishs/helloworld-php"
+                DOCKER_USERNAME = "denishs"
                 DOCKER_PASSWORD = 'Denis@1026'
      }
     agent any    
