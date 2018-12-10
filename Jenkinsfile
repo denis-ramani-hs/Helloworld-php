@@ -1,15 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:7-alpine' }
+    }
     stages {
-        stage('build') {
+        stage('Test') {
             steps {
-                sh 'echo "Hello World"'
-                sh 'cat /etc/os-release'
-                sh '''
-                   docker -v
-                   docker build -t denishs/helloworld-php:1.1 .
-                   docker push denishs/helloworld-php:1.1
-                   '''
+                sh 'node --version'
             }
         }
     }
