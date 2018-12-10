@@ -18,7 +18,7 @@ pipeline {
         stage('Update') {
             steps {
                 sh '''
-                    docker rm -f $(docker ps -q -f ancestor=denishs/helloworld-php:1.1 -f name=webserver-01)
+                    docker rm -f $(docker ps -q -f name=webserver-01)
                     docker run  -d --restart unless-stopped -p 80:80 --name webserver-01 denishs/helloworld-php:1.1
                    '''
             }
